@@ -16,6 +16,7 @@ public class Timer : NetworkBehaviour
     public Text timeleft;
     public Text BegginingTypo;
     public Text[] Wave;
+    [SerializeField] private GameObject spawnerManager;
 
     private void Start()
     {
@@ -35,6 +36,7 @@ public class Timer : NetworkBehaviour
             timeleft.gameObject.SetActive(false);
             BegginingTypo.gameObject.SetActive(false);
             Wave[0].gameObject.SetActive(true);
+            spawnerManager.SetActive(true);
         }
     }
 }
